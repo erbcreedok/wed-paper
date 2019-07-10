@@ -3,6 +3,7 @@
 <head>
     <title>Open your ticket to a great journey</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 <div class="area" >
@@ -19,47 +20,44 @@
         <li></li>
     </ul>
 </div>
-<div class="container">
-    <figure class='book'>
 
-        <!-- Front -->
-        <ul class='hardcover_front'>
-            <li>
-                <div class="coverDesign blue">
-                    <h1>CSS</h1>
-                    <p>BOOK</p>
-                </div>
-            </li>
-            <li></li>
-        </ul>
+<figure class='book mx-auto' style="margin-top: 7rem">
 
-        <!-- Pages -->
+    <!-- Front -->
+    <ul class='hardcover_front'>
+        <li class="bg-cover" style="background-image: url('./images/cover-2.jpg')">
+            <img class="flower-top" src="./images/flower-top.png" alt="">
+            <img class="flower-bottom" src="./images/flower-bottom.png" alt="">
+        </li>
+        <li></li>
+    </ul>
 
-        <ul class='page'>
-            <li></li>
-            <li>
-                <a class="btn" href="#">Download</a>
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <!-- Pages -->
 
-        <!-- Back -->
+    <ul class='page'>
+        <li class="bg-cover" style="background-image: url('./images/3.jpeg')"></li>
+        <li>
+        </li>
+        <li class="bg-cover" style="background-image: url('./images/2.jpeg')"></li>
+        <li class="bg-cover" style="background-image: url('./images/1.jpeg')"></li>
+    </ul>
 
-        <ul class='hardcover_back'>
-            <li></li>
-            <li></li>
-        </ul>
-        <ul class='book_spine'>
-            <li></li>
-            <li></li>
-        </ul>
-    </figure>
-</div>
+    <!-- Back -->
+
+    <ul class='hardcover_back'>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class='book_spine'>
+        <li></li>
+        <li></li>
+    </ul>
+</figure>
 
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/vivus.min.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
