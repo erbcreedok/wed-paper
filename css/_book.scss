@@ -23,7 +23,7 @@ a {
     top: 33px;
     transform-origin: top right;
     transform: rotate(0deg);
-    animation: lowShake infinite 5s ease-in-out;
+    animation: lowShake infinite 5s 2s ease-in-out;
 }
 
 .flower-bottom {
@@ -32,7 +32,7 @@ a {
     bottom: 33px;
     transform-origin: bottom left;
     transform: rotate(0deg);
-    animation: lowShake infinite 6s .8s ease-in-out;
+    animation: lowShake infinite 6s 2.8s ease-in-out;
 }
 
 @keyframes lowShake {
@@ -44,6 +44,18 @@ a {
     }
     40% {
         transform: rotate(5deg);
+    }
+}
+
+@keyframes coverShake {
+    0%, 40%, 100% {
+        transform: rotateY(0deg) translateZ(8px);
+    }
+    10%, 30% {
+        transform: rotateY(-2deg) translateZ(8px);
+    }
+    20% {
+        transform: rotateY(2deg) translateZ(8px);
     }
 }
 
@@ -102,7 +114,9 @@ a {
     transform-origin: 0% -50%;
     transform: scale(1);
     transition: all 0.8s ease;
+    animation: coverShake 10s 1s infinite ease-in-out both;
 }
+
 
 .hardcover_front li:first-child {
     background-color: #eee;
@@ -114,6 +128,9 @@ a {
 /* reverse */
 .hardcover_front li:last-child {
     background-color: #fffbec;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 /* HARDCOVER BACK */
@@ -303,9 +320,9 @@ a {
 }
 
 .hardcover_front li:first-child:before {
-    -webkit-transform: rotateY(90deg) translateZ(318px) translateX(2px);
-    -moz-transform: rotateY(90deg) translateZ(318px) translateX(2px);
-    transform: rotateY(90deg) translateZ(318px) translateX(2px);
+    -webkit-transform: rotateY(90deg) translateZ(317px) translateX(2px);
+    -moz-transform: rotateY(90deg) translateZ(317px) translateX(2px);
+    transform: rotateY(90deg) translateZ(317px) translateX(2px);
 }
 
 .hardcover_front li:last-child:after,
