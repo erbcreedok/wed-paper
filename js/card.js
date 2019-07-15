@@ -77,7 +77,7 @@ function tiltCard(x, y, angle, power) {
     "-webkit-transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateX(" + around1 + "deg) rotateY(" + around2 + "deg)",'background-position': y + '%' + ' ' + x + '%'
   });
   // card shadow pos and angle
-  $cardShadow.css({"transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateY(" + around2*scaleY+ "deg) rotateX(" + around1*scaleX + "deg)"});
+  // $cardShadow.css({"transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateY(" + around2*scaleY+ "deg) rotateX(" + around1*scaleX + "deg)"});
   $cardContext.css({
     "transform": "translateX(" + trans1 * .25 + "px) translateY(" + trans2 * .25 + "px)"
   });

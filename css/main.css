@@ -908,14 +908,6 @@ body {
   z-index: -1;
 }
 
-.card-shadow {
-  top: 10px;
-  transform-style: preserve-3d;
-  z-index: -1;
-  background: #b3b3b3;
-  box-shadow: 0 0 30px 10px #aaa;
-}
-
 .card-front, .card-title, .card-subtitle {
   position: absolute;
   color: #fff;
