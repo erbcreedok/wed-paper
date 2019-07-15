@@ -12,16 +12,7 @@ var
   lastDegress = {x: null, y: null},
   tiltDegress = {x: null, y: null};
 
-$(document).mousemove(function(event) {
-  // titlCard(event.pageX, event.pageY);
-});
-
-
-
-var dataContainerOrientation = document.getElementById('dataContainerOrientation');
-
-
-function tiltCardd(x, y) {
+function tiltCardByMouse(x, y) {
   // dataContainerOrientation.innerHTML = `x: ${x}, y: ${y}`;
   var
     wHeight= $(window).height(),
@@ -76,7 +67,8 @@ function tiltCard(x, y, angle, power) {
   $cardShine.css('background', 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + power  + ') 0%,rgba(255,255,255, 0) 80%)');
   // card pos and angle
   $card.css({
-    "-webkit-transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateX(" + around1 + "deg) rotateY(" + around2 + "deg)",'background-position': y + '%' + ' ' + x + '%'
+    "-webkit-transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateX(" + around1 + "deg) rotateY(" + around2 + "deg)",
+    'background-position': (y/30 * 50 + 50) + '%' + ' ' + ((-x)/30 * 50 + 50) + '%'
   });
   // card shadow pos and angle
   // $cardShadow.css({"transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateY(" + around2*scaleY+ "deg) rotateX(" + around1*scaleX + "deg)"});
@@ -99,40 +91,31 @@ function tilt(x, y) {
   y -= idleDegress.y;
 
   var
-    theta = Math.atan2(y, x), // угол между курсором и центром картинки в RAD
+    theta = Math.atan2(-y, x), // угол между курсором и центром картинки в RAD
     angle = theta * 180 / Math.PI;
-
-  // var
-  //   wHeight= $(window).height(),
-  //   wWidth= $(window).width();
-  //
-  // x = x * wHeight / 60;
-  // y = y * wWidth / 60;
-  //
-  // // tiltCard(y, x);
-  //
 
   tiltCard(x*.5, y*.5, angle, Math.max(Math.abs(y), Math.abs(x)) * .02);
 
 }
 
-// setInterval(function () {
-//   console.log(tiltDegress)
-// }, 3000);
 
-if (window.DeviceOrientationEvent) {
-  alert('DOE');
-  window.addEventListener("deviceorientation", function () {
-    tilt(event.beta, event.gamma);
-  }, true);
-} else if (window.DeviceMotionEvent) {
-  alert('DME');
-  window.addEventListener('devicemotion', function () {
-    tilt(event.acceleration.x * 2, event.acceleration.y * 2);
-  }, true);
+if (matchMedia('(pointer:fine)').matches) {
+  $(document).mousemove(function(event) {
+    tiltCardByMouse(event.pageX, event.pageY);
+  });
 } else {
-  alert('MO');
-  window.addEventListener("MozOrientation", function () {
-    tilt(orientation.x * 50, orientation.y * 50);
-  }, true);
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", function () {
+      tilt(event.beta, event.gamma);
+    }, true);
+  } else if (window.DeviceMotionEvent) {
+    window.addEventListener('devicemotion', function () {
+      tilt(event.acceleration.x * 2, event.acceleration.y * 2);
+    }, true);
+  } else {
+    window.addEventListener("MozOrientation", function () {
+      tilt(orientation.x * 50, orientation.y * 50);
+    }, true);
+  }
+
 }
