@@ -927,6 +927,7 @@ body {
 .card-context {
   transform-style: preserve-3d;
   transform: translateZ(0px);
+  position: absolute;
 }
 
 .card-title {
@@ -955,6 +956,97 @@ body {
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.8);
   transform: translateZ(0px);
   font-family: "Comfortaa", cursive;
+}
+
+svg.root {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -100em;
+}
+
+svg {
+  width: 120%;
+  height: 110%;
+  background: transparent;
+  fill-opacity: 0.75;
+  left: -10%;
+  top: -5%;
+  position: absolute;
+}
+
+symbol {
+  overflow: visible;
+}
+
+svg use {
+  transform: rotate(0deg);
+  transition: transform calc(var(--t) * 1s);
+}
+
+svg g.a {
+  transition: transform calc(var(--t) * 1s);
+}
+
+svg g.a {
+  transform: scale(var(--scale)) rotate(-90deg);
+  filter: url("#f");
+}
+
+._2 {
+  --n: 2;
+}
+
+._3 {
+  --n: 3;
+}
+
+._4 {
+  --n: 4;
+}
+
+._5 {
+  --n: 5;
+}
+
+svg .a g:nth-of-type(1) {
+  transform: rotate(calc(-.5 * 180deg / var(--n)));
+}
+
+svg .a g:nth-of-type(2) {
+  transform: rotate(calc( .5 * 180deg / var(--n)));
+}
+
+svg .a g:nth-of-type(1) use:nth-of-type(2) {
+  transform: rotate(calc(-1deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(1) use:nth-of-type(3) {
+  transform: rotate(calc(-2deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(1) use:nth-of-type(4) {
+  transform: rotate(calc(-3deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(1) use:nth-of-type(5) {
+  transform: rotate(calc(-4deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(2) use:nth-of-type(2) {
+  transform: rotate(calc(1deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(2) use:nth-of-type(3) {
+  transform: rotate(calc(2deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(2) use:nth-of-type(4) {
+  transform: rotate(calc(3deg * 180 / var(--n)));
+}
+
+svg .a g:nth-of-type(2) use:nth-of-type(5) {
+  transform: rotate(calc(4deg * 180 / var(--n)));
 }
 
 /*# sourceMappingURL=main.css.map */
