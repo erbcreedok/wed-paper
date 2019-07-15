@@ -71,6 +71,8 @@ function tiltCard(x, y, angle, power) {
     trans1 = y*-2,
     trans2 = x*-2;
 
+  console.log({angle, power});
+
   $cardShine.css('background', 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + power  + ') 0%,rgba(255,255,255, 0) 80%)');
   // card pos and angle
   $card.css({
@@ -110,7 +112,7 @@ function tilt(x, y) {
   // // tiltCard(y, x);
   //
 
-  tiltCard(x, y, angle, Math.max(Math.abs(y), Math.abs(x)) * .02);
+  tiltCard(x*.5, y*.5, angle, Math.max(Math.abs(y), Math.abs(x)) * .02);
 
 }
 

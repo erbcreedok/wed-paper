@@ -906,6 +906,8 @@ body {
   background: -webkit-linear-gradient(315deg, rgba(245, 245, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
   z-index: -1;
+  top: 0;
+  left: 0;
 }
 
 .card-front, .card-title, .card-subtitle {
