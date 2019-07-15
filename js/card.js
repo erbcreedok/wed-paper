@@ -1,8 +1,9 @@
 var
   can = true;
   $card = $('.card'),
-  $cardTitle = $('.card-context'),
-  $cardSubtitle = $('.card-'),
+  $cardContext = $('.card-context'),
+  $cardTitle = $('.card-title'),
+  $cardSubtitle = $('.card-subtitle'),
   $cardShine = $('.card-shine'),
   $cardShadow = $('.card-shadow'),
   currentMousePos = { x: 0, y: 0 },
@@ -47,7 +48,8 @@ function tiltCardd(x, y) {
   $cardShine.css('background', 'linear-gradient(' + angle + 'deg, rgba(255,255,255,' + (currentMousePos.y / wHeight) * .7 + ') 0%,rgba(255,255,255, 0) 80%)');
   // card pos and angle
   $card.css({
-    "-webkit-transform": "translate3d(" + trans1 + ", " + trans2 +", 0) scale(1) rotatex(" + around1 + ") rotatey(" + around2 + ")",'background-position': mousePositionX + '%' + ' ' + (currentMousePos.y / wHeight) * 50  + '%'
+    "-webkit-transform": "translate3d(" + trans1 + ", " + trans2 +", 0) scale(1) rotateX(" + around1 + ") rotateY(" + around2 + ")",
+    'background-position': mousePositionX + '%' + ' ' + (currentMousePos.y / wHeight) * 50  + '%'
   });
   // card shadow pos and angle
   $cardShadow.css({"transform": "scale(.9,.9) translateX(" + ((mouseFromCenter.x * -0.02) + 12) + "px) translateY(" + ((mouseFromCenter.y * -0.02) + 12 ) + "px) scale(1.0) rotateY(" + (mouseFromCenter.x / 25) * 0.5 + "deg) rotateX(" + ((mouseFromCenter.y / -25) ) + "deg)" });
@@ -76,7 +78,9 @@ function tiltCard(x, y, angle, power) {
   });
   // card shadow pos and angle
   $cardShadow.css({"transform": "translate3d(" + trans1 + "px, " + trans2 +"px, 0) rotateY(" + around2*scaleY+ "deg) rotateX(" + around1*scaleX + "deg)"});
-
+  $cardContext.css({
+    "transform": "translateX(" + trans1 * .25 + "px) translateY(" + trans2 * .25 + "px)"
+  });
 }
 
 function tilt(x, y) {

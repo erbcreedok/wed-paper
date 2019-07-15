@@ -932,6 +932,7 @@ body {
 
 .card-context {
   transform-style: preserve-3d;
+  transform: translateZ(0px);
 }
 
 .card-title {
