@@ -22,43 +22,54 @@
 </div>
 
 <div class="book-wrap">
-<figure class='book mx-auto' style="margin-top: 7rem">
+    <figure class='book mx-auto'>
 
-    <!-- Front -->
-    <ul class='hardcover_front'>
-        <li class="bg-cover" style="background-image: url('./images/cover-2.jpg')">
-            <img class="flower-top" src="./images/flower-top.png" alt="">
-            <img class="flower-bottom" src="./images/flower-bottom.png" alt="">
-        </li>
-        <li></li>
-    </ul>
+        <!-- Front -->
+        <ul class='hardcover_front'>
+            <li class="bg-cover" style="background-image: url('./images/cover-2.jpg')">
+                <img class="flower-top" src="./images/flower-top.png" alt="">
+                <img class="flower-bottom" src="./images/flower-bottom.png" alt="">
+            </li>
+            <li></li>
+        </ul>
 
-    <!-- Pages -->
+        <!-- Pages -->
 
-    <ul class='page'>
-        <li class="bg-cover" style="background-image: url('./images/3.jpeg')"></li>
-        <li>
-        </li>
-        <li class="bg-cover" style="background-image: url('./images/2.jpeg')"></li>
-        <li class="bg-cover" style="background-image: url('./images/1.jpeg')"></li>
-    </ul>
+        <ul class='page'>
+            <li class="bg-pattern" style="background-image: url('./images/skulls.png')"></li>
+            <li>
+                <div class="space-wrap"><canvas id="space"></canvas></div>
+                <div class="message-wrap">
+                    <div class="container">
+                        <h2>Dear, Somebody!</h2>
+                        <p>
+                            Please, join us to our wedding celebration party
+                        </p>
+                    </div>
+                </div>
+            </li>
+            <li class="bg-pattern" style="background-image: url('./images/skulls.png')"></li>
+            <li class="bg-pattern" style="background-image: url('./images/skulls.png')"></li>
+        </ul>
 
-    <!-- Back -->
+        <!-- Back -->
 
-    <ul class='hardcover_back'>
-        <li></li>
-        <li></li>
-    </ul>
-    <ul class='book_spine'>
-        <li></li>
-        <li></li>
-    </ul>
-</figure>
+        <ul class='hardcover_back'>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul class='book_spine'>
+            <li></li>
+            <li></li>
+        </ul>
+    </figure>
 </div>
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/vivus.min.js"></script>
-<!--<script src="js/card.js"></script>-->
+<script src="js/space.js"></script>
+<script src="js/vanilla-tilt.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
