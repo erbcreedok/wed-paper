@@ -232,11 +232,11 @@ if (matchMedia('(pointer:fine)').matches) {
 } else {
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
-      movePointer(event.beta, event.gamma);
+      movePointer(-event.gamma, -event.beta);
     }, true);
   } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {
-      movePointer(event.acceleration.x * 2, event.acceleration.y * 2);
+      movePointer(-event.acceleration.y * 2, -event.acceleration.x * 2);
     }, true);
   }
 }

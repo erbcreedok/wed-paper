@@ -113,7 +113,7 @@ a {
     vertical-align: top;
 }
 .book {
-    margin-top: 7rem;
+    margin-top: 12vh;
     position: relative;
     width: 320px;
     height: 440px;
@@ -137,7 +137,8 @@ a {
 
 /* reverse */
 .hardcover_front li:last-child {
-    background-color: #fffbec;
+  background-color: #fffbec;
+  backface-visibility: hidden;
 }
 
 /* HARDCOVER BACK */
@@ -271,20 +272,21 @@ a {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    -webkit-transform: translateZ(2px);
-    -moz-transform: translateZ(2px);
-    transform: translateZ(2px);
+    -webkit-transform: translateZ(4px);
+    -moz-transform: translateZ(4px);
+    transform: translateZ(4px);
+
 }
 
 .hardcover_front li:last-child {
-    -webkit-transform: rotateY(180deg) translateZ(2px);
-    -moz-transform: rotateY(180deg) translateZ(2px);
-    transform: rotateY(180deg) translateZ(2px);
+    -webkit-transform: rotateY(180deg) translateZ(-2px);
+    -moz-transform: rotateY(180deg) translateZ(-2px);
+    transform: rotateY(180deg) translateZ(-2px);
 }
 
 .hardcover_front li:last-child, .hardcover_back li:first-child {
   background: #653c96;
-  box-shadow: inset 14px 0px 16px 4px rgba(0,0,0,.2);
+  box-shadow: inset 14px 0 16px 4px rgba(0,0,0,.2);
 }
 
 /* HARDCOVER back */
@@ -623,7 +625,7 @@ a {
     }
 
     .book {
-        margin: 0 auto;
+        margin: 3rem auto;
     }
 
     figcaption {
