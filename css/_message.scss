@@ -1,31 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans&display=swap');
 .message-wrap {
-  color: white;
+  color: #221403;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
+  height: 100%;
+  z-index: 10;
+  &.on-color {
+    color: white;
+  }
   .container {
+    height: 100%;
     width: 300px;
-    margin: 0 0 0 20px;
+    padding: 0 10px 0 20px;
+    box-sizing: border-box;
+  }
+  .curved {
+    font-family: 'Dancing Script', cursive;
   }
   h2 {
     text-align: left;
     margin-top: 50px;
     height: 50px;
-    font-size: 30px;
+    font-size: 32px;
     font-family: 'Dancing Script', cursive;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
+    transition: 1s .5s ease-in;
   }
   p {
     margin: 30px auto;
+    opacity: 0;
+    transition: 1s 1.5s ease-in;
   }
-  font-family: 'Lato', sans-serif;
+  button {
+    border: 1px dashed white;
+    padding: 15px 20px;
+    background: none;
+    color: white;
+    border-radius: 10px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: 1s 2s ease-in;
+    width: 100%;
+  }
+  font-family: 'PT Sans', sans-serif;
 }
 
 .open {
   .message-wrap h2 {
-    animation: writingScript 1.3s .5s ease-in both;
+    width: 100%;
+  }
+  p {
+    opacity: 1;
+  }
+  button {
+    opacity: 1;
   }
 }
 

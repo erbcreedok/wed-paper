@@ -199,16 +199,6 @@ function onMouseMove( event ) {
   
 }
 
-function onTouchMove( event ) {
-  
-  touchInput = true;
-  
-  movePointer( event.touches[0].clientX, event.touches[0].clientY, true );
-  
-  event.preventDefault();
-  
-}
-
 function onMouseLeave() {
   
   pointerX = null;
@@ -226,13 +216,13 @@ function simulate(repeat=10, x = 10, y=10) {
 }
 
 if (matchMedia('(pointer:fine)').matches) {
-  $(document).mousemove(function(event) {
-    onMouseMove(event);
-  });
-} else {
+//   $(document).mousemove(function(event) {
+//     onMouseMove(event);
+//   });
+// } else {
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
-      movePointer(-event.gamma, -event.beta);
+      movePointer(-(event.gamma*event.gamma), -(event.beta*event.beta));
     }, true);
   } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {

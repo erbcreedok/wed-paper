@@ -22,7 +22,7 @@
 </div>
 
 <div class="book-wrap">
-    <figure class='book mx-auto'>
+    <figure class='book' style="margin-left: auto; margin-right: auto">
 
         <!-- Front -->
         <ul class='hardcover_front'>
@@ -36,15 +36,288 @@
         <!-- Pages -->
 
         <ul class='page'>
-            <li class="bg-pattern" style="background-image: url('./images/skulls.png')"></li>
+            <li class="bg-pattern" style="background-image: url('./images/skulls.png')">
+                <div class="message-wrap">
+                    <div class="container">
+                        <p class="curved" style="margin: 30px 0 10px">Time:</p>
+                        <p style="margin: 10px 0">
+                            3rd August, 17:00
+                        </p>
+                        <p class="curved" style="margin: 30px 0 10px">Placement:</p>
+                        <p style="margin: 10px 0">
+                            Astana city, Some restaurant
+                        </p>
+                        <a class="dg-widget-link" target="_blank" href="http://2gis.kz/astana/firm/70000001018126924/center/71.47357463836671,51.12293332122416/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">
+                            <img src="images/map.jpg" alt="" style="width: 100%; border: 1px solid black; padding: 3px">
+                        </a>
+                        <!--<div class="dg-widget-link">-->
+                            <!--<a href="http://2gis.kz/astana/firm/70000001018126924/photos/70000001018126924/center/71.47357463836671,51.12293332122416/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a>-->
+                        <!--</div>-->
+                        <!--<div class="dg-widget-link">-->
+                            <!--<a href="http://2gis.kz/astana/center/71.473576,51.122681/zoom/16/routeTab/rsType/bus/to/71.473576,51.122681╎Казахский национальный университет искусств?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Казахский национальный университет искусств</a>-->
+                        <!--</div>-->
+                        <!--<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>-->
+                        <!--<script charset="utf-8">new DGWidgetLoader({"width":'100%',"height":200,"borderColor":"#a3a3a3","pos":{"lat":51.12293332122416,"lon":71.47357463836671,"zoom":16},"opt":{"city":"astana"},"org":[{"id":"70000001018126924"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>-->
+                    </div>
+                </div>
+            </li>
             <li>
                 <div class="space-wrap"><canvas id="space"></canvas></div>
-                <div class="message-wrap">
+                <div class="message-wrap on-color">
                     <div class="container">
                         <h2>Dear, Somebody!</h2>
                         <p>
                             Please, join us to our wedding celebration party
                         </p>
+                        <div style="text-align: right">
+                            <button id="open-next">
+                                see address and time
+                            </button>
+                        </div>
+                        <div class='scene'>
+                            <div class='scene_titanShadow'></div>
+                            <div class='t_wrap'>
+                                <div class='scene_titan'>
+                                    <div class='eyes'>
+                                        <div class='eye eye--left'></div>
+                                        <div class='eye eye--right'></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='scene_saturn'>
+                                <div class='scene_saturn__face'>
+                                    <div class='face_clip'>
+                                        <div class='eye eye--left'></div>
+                                        <div class='eye eye--right'></div>
+                                        <div class='mouth'></div>
+                                    </div>
+                                </div>
+                                <div class='scene_saturn__shadow'></div>
+                                <div class='scene_saturn__shadowRing'></div>
+                                <div class='scene_saturn__sparks'>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                    <div class='spark'></div>
+                                </div>
+                                <div class='scene_saturn__ring'>
+                                    <div class='small'>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                        <div class='small_part'></div>
+                                    </div>
+                                    <div class='layer'>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                    </div>
+                                    <div class='layer'>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                    </div>
+                                    <div class='layer'>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                        <div class='layer_part'></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </li>
@@ -66,10 +339,10 @@
 </div>
 
 <script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/vivus.min.js"></script>
 <script src="js/space.js"></script>
 <script src="js/vanilla-tilt.min.js"></script>
+<!--<script src="js/oridomi.min.js"></script>-->
 <script src="js/main.js"></script>
 </body>
 </html>

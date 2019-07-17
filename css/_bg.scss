@@ -5,7 +5,7 @@
 
 body{
   width: 100vw;
-  height:100vh;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -19,11 +19,8 @@ body{
   top: 0;
   left: 0;
   &:after{
-    opacity: 0;
-    transition: opacity .8s;
-  }
-  &.spaced:after {
     content: "";
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -32,6 +29,9 @@ body{
     pointer-events: none;
     background: linear-gradient(to left, #0f0812, #04111a);
     z-index: -1;
+    transition: opacity 1s 1s;
+  }
+  &.spaced:after {
     opacity: 1;
   }
 }
