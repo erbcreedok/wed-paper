@@ -2,16 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81dc0323-9bc6-49b8-b686-3af77334f2a7" name="Default Changelist" comment="add touch event detect">
-      <change afterPath="$PROJECT_DIR$/js/token-base.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_book.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_book.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_message.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_message.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/map.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/map.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/map.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/space.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/space.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/space.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
-              <caret line="220" column="44" lean-forward="true" selection-start-line="220" selection-start-column="44" selection-end-line="223" selection-end-column="11" />
+              <caret line="220" column="41" lean-forward="true" selection-start-line="220" selection-start-column="41" selection-end-line="223" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -156,7 +146,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/_message.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
@@ -210,12 +200,12 @@
         <option value="$PROJECT_DIR$/css/main.scss" />
         <option value="$PROJECT_DIR$/css/_bg.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/js/space.js" />
         <option value="$PROJECT_DIR$/js/token-base.js" />
         <option value="$PROJECT_DIR$/css/_book.scss" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/_message.scss" />
+        <option value="$PROJECT_DIR$/js/space.js" />
       </list>
     </option>
   </component>
@@ -313,7 +303,7 @@
       <workItem from="1562662543008" duration="29706000" />
       <workItem from="1562792863754" duration="6285000" />
       <workItem from="1563161651392" duration="12976000" />
-      <workItem from="1563394748429" duration="10158000" />
+      <workItem from="1563394748429" duration="10253000" />
     </task>
     <task id="LOCAL-00001" summary="add book styling">
       <created>1562792326462</created>
@@ -375,7 +365,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63108000" />
+    <option name="totallyTimeSpent" value="63203000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -390,7 +380,7 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.32891566" />
@@ -404,7 +394,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49257016" visible="true" weight="0.3120482" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49257016" visible="true" weight="0.3120482" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50742984" side_tool="true" weight="0.33045357" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -538,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/space.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="220" column="44" lean-forward="true" selection-start-line="220" selection-start-column="44" selection-end-line="223" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/token-base.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -581,6 +564,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/space.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="220" column="41" lean-forward="true" selection-start-line="220" selection-start-column="41" selection-end-line="223" selection-end-column="8" />
         </state>
       </provider>
     </entry>

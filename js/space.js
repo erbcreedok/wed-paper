@@ -218,10 +218,10 @@ function simulate(repeat=10, x = 10, y=10) {
 
 
 if (matchMedia('(pointer:fine)').matches) {
-//   $(document).mousemove(function(event) {
-//     onMouseMove(event);
-//   });
-// } else {
+  $(document).mousemove(function(event) {
+    onMouseMove(event);
+  });
+} else {
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
       movePointer(-(event.gamma*4), -(event.beta*4));
