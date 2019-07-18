@@ -36,44 +36,25 @@
         <!-- Pages -->
 
         <ul class='page'>
-            <li class="bg-pattern" style="background-image: url('./images/skulls.png')">
+            <li id="open-prev" class="bg-pattern" data-theme="space" style="background-image: url('./images/skulls.png')">
                 <div class="message-wrap">
-                    <div class="container">
-                        <p class="curved" style="margin: 30px 0 10px">Time:</p>
-                        <p style="margin: 10px 0">
-                            3rd August, 17:00
-                        </p>
-                        <p class="curved" style="margin: 30px 0 10px">Placement:</p>
-                        <p style="margin: 10px 0">
-                            Astana city, Some restaurant
-                        </p>
-                        <a class="dg-widget-link" target="_blank" href="http://2gis.kz/astana/firm/70000001018126924/center/71.47357463836671,51.12293332122416/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">
-                            <img src="images/map.jpg" alt="" style="width: 100%; border: 1px solid black; padding: 3px">
-                        </a>
-                        <!--<div class="dg-widget-link">-->
-                            <!--<a href="http://2gis.kz/astana/firm/70000001018126924/photos/70000001018126924/center/71.47357463836671,51.12293332122416/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a>-->
-                        <!--</div>-->
-                        <!--<div class="dg-widget-link">-->
-                            <!--<a href="http://2gis.kz/astana/center/71.473576,51.122681/zoom/16/routeTab/rsType/bus/to/71.473576,51.122681╎Казахский национальный университет искусств?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Казахский национальный университет искусств</a>-->
-                        <!--</div>-->
-                        <!--<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>-->
-                        <!--<script charset="utf-8">new DGWidgetLoader({"width":'100%',"height":200,"borderColor":"#a3a3a3","pos":{"lat":51.12293332122416,"lon":71.47357463836671,"zoom":16},"opt":{"city":"astana"},"org":[{"id":"70000001018126924"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>-->
-                    </div>
+                    <a class="dg-widget-link" href="http://2gis.kz/astana/firm/70000001018118179/center/71.4710855484009,51.121290203294784/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Нур-Султана</a><div class="dg-widget-link"><a href="http://2gis.kz/astana/firm/70000001018118179/photos/70000001018118179/center/71.4710855484009,51.121290203294784/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a></div><div class="dg-widget-link"><a href="http://2gis.kz/astana/center/71.471076,51.120797/zoom/16/routeTab/rsType/bus/to/71.471076,51.120797╎ТӘУЕЛСІЗДІК САРАЙЫ?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до ТӘУЕЛСІЗДІК САРАЙЫ</a></div><script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script><script charset="utf-8">new DGWidgetLoader({"width":'100%',"height":'100%',"borderColor":"#a3a3a3","pos":{"lat":51.121290203294784,"lon":71.4710855484009,"zoom":14},"opt":{"city":"astana"},"org":[{"id":"70000001018118179"}]});</script><noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
                 </div>
             </li>
-            <li>
+            <li id="open-next">
                 <div class="space-wrap"><canvas id="space"></canvas></div>
                 <div class="message-wrap on-color">
                     <div class="container">
-                        <h2>Dear, Somebody!</h2>
+                        <h2>Dear, <span class="namespace">Somebody!</span></h2>
                         <p>
                             Please, join us to our wedding celebration party
                         </p>
-                        <div style="text-align: right">
-                            <button id="open-next">
-                                see address and time
-                            </button>
-                        </div>
+                        <p style="margin: 10px 0">
+                            at 3rd August 18:00
+                        </p>
+                        <p style="margin: 10px 0">
+                            in Astana, Palace of Independence
+                        </p>
                         <div class='scene'>
                             <div class='scene_titanShadow'></div>
                             <div class='t_wrap'>
@@ -338,10 +319,12 @@
     </figure>
 </div>
 
+
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/vivus.min.js"></script>
 <script src="js/space.js"></script>
 <script src="js/vanilla-tilt.min.js"></script>
+<script src="js/token-base.js"></script>
 <!--<script src="js/oridomi.min.js"></script>-->
 <script src="js/main.js"></script>
 </body>

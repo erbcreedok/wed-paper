@@ -215,14 +215,16 @@ function simulate(repeat=10, x = 10, y=10) {
   }, 10);
 }
 
+
+
 if (matchMedia('(pointer:fine)').matches) {
-  $(document).mousemove(function(event) {
-    onMouseMove(event);
-  });
-} else {
+//   $(document).mousemove(function(event) {
+//     onMouseMove(event);
+//   });
+// } else {
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
-      movePointer(-(event.gamma*event.gamma), -(event.beta*event.beta));
+      movePointer(-(event.gamma*4), -(event.beta*4));
     }, true);
   } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {

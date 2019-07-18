@@ -6,9 +6,19 @@ function openBook() {
   $('.area').addClass('spaced');
   setTimeout(function () {
     $bookWrap.addClass('hide-book');
-    $('#open-next').click(function () {
-      $bookWrap.addClass('open-next');
-    });
+    setTimeout(function() {
+      $('#open-next').click(function () {
+        if (!$bookWrap.hasClass('open-next')) {
+          setTimeout(function() {$bookWrap.addClass('open-next');});
+        }
+      });
+      $(document).click(function () {
+        if ($bookWrap.hasClass('open-next')) {
+          setTimeout(function() {$bookWrap.removeClass('open-next');});
+        }
+      });
+    }, 3000);
+
   }, 1100);
 }
 

@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans&display=swap');
-.message-wrap {
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Quicksand&display=swap');.message-wrap {
   color: #221403;
   position: relative;
   font-size: 22px;
@@ -10,41 +9,31 @@
   }
   .container {
     height: 100%;
-    width: 300px;
+    min-width: 300px;
     padding: 0 10px 0 20px;
     box-sizing: border-box;
+    overflow: auto;
   }
   .curved {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Kaushan Script', cursive;
   }
   h2 {
     text-align: left;
     margin-top: 50px;
     height: 50px;
     font-size: 32px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Kaushan Script', cursive;
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    transition: 1s .5s ease-in;
+    transition: 1.5s 2s ease-in;
   }
   p {
     margin: 30px auto;
     opacity: 0;
-    transition: 1s 1.5s ease-in;
+    transition: 1s 3s ease-in;
   }
-  button {
-    border: 1px dashed white;
-    padding: 15px 20px;
-    background: none;
-    color: white;
-    border-radius: 10px;
-    margin-right: 10px;
-    opacity: 0;
-    transition: 1s 2s ease-in;
-    width: 100%;
-  }
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .open {

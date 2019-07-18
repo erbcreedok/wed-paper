@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script|PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Quicksand&display=swap");
 ul {
   margin: 0;
   padding: 0;
@@ -109,8 +109,10 @@ a {
 .book {
   margin-top: 12vh;
   position: relative;
-  width: 320px;
-  height: 440px;
+  max-width: 90vw;
+  min-width: 300px;
+  width: 400px;
+  height: 500px;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
   perspective: 1000px;
@@ -118,7 +120,7 @@ a {
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   transform-origin: 0% -50%;
-  transform: scale(1);
+  transform: scale(1) translateX(-10px);
   transition: all 0.8s ease;
 }
 
@@ -583,12 +585,12 @@ a {
 
 .book-wrap.hide-book .hardcover_front, .book-wrap.hide-book .hardcover_back, .book-wrap.hide-book .book_spine, .book-wrap.hide-book .page li {
   opacity: 0;
-  transition: 0.5s ease-out;
+  transition: 0.5s 5s ease-out;
 }
 .book-wrap.hide-book .page li:nth-child(1) {
   opacity: 1;
   border-radius: 5px;
-  animation: drowningShadow 10s 5s ease-in-out infinite;
+  animation: drowningShadow 30s 5s ease-in-out infinite;
 }
 .book-wrap.hide-book .page li:nth-child(2) {
   opacity: 1;
@@ -596,10 +598,10 @@ a {
   transition: 0.1s;
 }
 .book-wrap.hide-book .page li:nth-child(3) {
-  transition: 0.15s 0.5s ease-out;
+  transition: 0.15s 5.5s ease-out;
 }
 .book-wrap.hide-book .page li:nth-child(4) {
-  transition: 0.15s 0.4s ease-out;
+  transition: 0.15s 5.4s ease-out;
 }
 
 /*
@@ -632,7 +634,13 @@ a {
   0%, 100% {
     box-shadow: 0 0 0 #ffffff59;
   }
-  50% {
+  3%, 97% {
+    box-shadow: 0 0 10px #ffffff59;
+  }
+  12.5%, 37.5%, 62.5%, 87.5% {
+    box-shadow: 0 0 20px #ffffff59;
+  }
+  25%, 50%, 75% {
     box-shadow: 0 0 50px #ffffff59;
   }
 }
@@ -1025,46 +1033,36 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
   font-size: 22px;
   height: 100%;
   z-index: 10;
-  font-family: "PT Sans", sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 .message-wrap.on-color {
   color: white;
 }
 .message-wrap .container {
   height: 100%;
-  width: 300px;
+  min-width: 300px;
   padding: 0 10px 0 20px;
   box-sizing: border-box;
+  overflow: auto;
 }
 .message-wrap .curved {
-  font-family: "Dancing Script", cursive;
+  font-family: "Kaushan Script", cursive;
 }
 .message-wrap h2 {
   text-align: left;
   margin-top: 50px;
   height: 50px;
   font-size: 32px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Kaushan Script", cursive;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  transition: 1s 0.5s ease-in;
+  transition: 1.5s 2s ease-in;
 }
 .message-wrap p {
   margin: 30px auto;
   opacity: 0;
-  transition: 1s 1.5s ease-in;
-}
-.message-wrap button {
-  border: 1px dashed white;
-  padding: 15px 20px;
-  background: none;
-  color: white;
-  border-radius: 10px;
-  margin-right: 10px;
-  opacity: 0;
-  transition: 1s 2s ease-in;
-  width: 100%;
+  transition: 1s 3s ease-in;
 }
 
 .open .message-wrap h2 {
@@ -1212,8 +1210,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -196px;
-    top: 81px;
+    left: -29px;
+    top: 142px;
     transform: scale(0);
   }
 }
@@ -1225,8 +1223,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -150px;
-    top: -30px;
+    left: -175px;
+    top: 103px;
     transform: scale(0);
   }
 }
@@ -1238,8 +1236,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 181px;
-    top: 44px;
+    left: 1px;
+    top: -88px;
     transform: scale(0);
   }
 }
@@ -1251,8 +1249,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 106px;
-    top: -186px;
+    left: 75px;
+    top: -51px;
     transform: scale(0);
   }
 }
@@ -1264,8 +1262,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 145px;
-    top: 43px;
+    left: 0px;
+    top: -46px;
     transform: scale(0);
   }
 }
@@ -1277,8 +1275,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 26px;
-    top: -79px;
+    left: -197px;
+    top: -106px;
     transform: scale(0);
   }
 }
@@ -1290,8 +1288,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -31px;
-    top: 137px;
+    left: -110px;
+    top: 157px;
     transform: scale(0);
   }
 }
@@ -1303,8 +1301,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 157px;
-    top: -7px;
+    left: 185px;
+    top: 3px;
     transform: scale(0);
   }
 }
@@ -1316,8 +1314,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 37px;
-    top: -103px;
+    left: 10px;
+    top: 81px;
     transform: scale(0);
   }
 }
@@ -1329,8 +1327,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -13px;
-    top: -94px;
+    left: -169px;
+    top: 38px;
     transform: scale(0);
   }
 }
@@ -1342,8 +1340,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 128px;
-    top: -150px;
+    left: -88px;
+    top: 186px;
     transform: scale(0);
   }
 }
@@ -1355,8 +1353,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -80px;
-    top: -31px;
+    left: 113px;
+    top: -129px;
     transform: scale(0);
   }
 }
@@ -1368,8 +1366,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 170px;
-    top: 195px;
+    left: 196px;
+    top: 121px;
     transform: scale(0);
   }
 }
@@ -1381,8 +1379,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 171px;
-    top: -185px;
+    left: -20px;
+    top: 57px;
     transform: scale(0);
   }
 }
@@ -1394,8 +1392,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -75px;
-    top: 91px;
+    left: 159px;
+    top: -188px;
     transform: scale(0);
   }
 }
@@ -1407,8 +1405,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 172px;
-    top: -181px;
+    left: 15px;
+    top: -18px;
     transform: scale(0);
   }
 }
@@ -1420,8 +1418,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: 59px;
-    top: -41px;
+    left: -120px;
+    top: -85px;
     transform: scale(0);
   }
 }
@@ -1433,8 +1431,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -177px;
-    top: 91px;
+    left: 126px;
+    top: 68px;
     transform: scale(0);
   }
 }
@@ -1446,8 +1444,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -190px;
-    top: 7px;
+    left: -119px;
+    top: -35px;
     transform: scale(0);
   }
 }
@@ -1459,8 +1457,8 @@ svg .a g:nth-of-type(2) use:nth-of-type(5) {
     transform: scale(1);
   }
   to {
-    left: -152px;
-    top: 92px;
+    left: -112px;
+    top: -133px;
     transform: scale(0);
   }
 }
