@@ -8,7 +8,9 @@ const canvas = document.querySelector( '.space-wrap #space' ),
 
 let scale = 1, // device pixel ratio
   width,
-  height;
+  height,
+  $width,
+  $height;
 
 let stars = [];
 
@@ -99,10 +101,13 @@ function recycleStar( star ) {
 function resize() {
   
   scale = window.devicePixelRatio || 1;
-  
-  width = window.innerWidth * scale;
-  height = window.innerHeight * scale;
-  
+
+  $width = window.innerWidth;
+  $height = window.innerHeight;
+
+  width = $width * scale;
+  height = $height * scale;
+
   canvas.width = width;
   canvas.height = height;
   
@@ -215,16 +220,29 @@ function simulate(repeat=10, x = 10, y=10) {
   }, 10);
 }
 
+var $moon = $('.moon');
 
+function moveMoon(x, y) {
+  var val = `translate(${x}px, ${y}px)`;
+  $moon.css({'transform': val, '-webkit-transform': val});
+}
+
+function mouseTilt(x, y) {
+  x = ((x-$width/2)/$width) * 60;
+  y = ((y-$height/2)/$height) * 60;
+  moveMoon(-x,-y);
+}
 
 if (matchMedia('(pointer:fine)').matches) {
   $(document).mousemove(function(event) {
     onMouseMove(event);
+    mouseTilt(event.clientX, event.clientY);
   });
 } else {
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", function () {
       movePointer(-(event.gamma*4), -(event.beta*4));
+      moveMoon(event.gamma, event.beta);
     }, true);
   } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {

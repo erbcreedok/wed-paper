@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Kaushan Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Kaushan Script'), local('KaushanScript-Regular'), url(https://fonts.gstatic.com/s/kaushanscript/v8/vm8vdRfvXFLG3OLnsO15WYS5DG74wNc.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(https://fonts.gstatic.com/s/quicksand/v9/6xKtdSZaM9iE8KbpRA_hK1QI.ttf) format('truetype');
+}
+.message-wrap {
+  color: #221403;
+  position: relative;
+  font-size: 22px;
+  height: 100%;
+  z-index: 10;
+  font-family: 'Quicksand', sans-serif;
+}
+.message-wrap.on-color {
+  color: white;
+}
+.message-wrap .container {
+  height: 100%;
+  min-width: 300px;
+  padding: 0 10px 0 20px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.message-wrap .curved {
+  font-family: 'Kaushan Script', cursive;
+}
+.message-wrap h2 {
+  text-align: left;
+  margin-top: 50px;
+  height: 50px;
+  font-size: 32px;
+  font-family: 'Kaushan Script', cursive;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  transition: 1.5s 2s ease-in;
+}
+.message-wrap p {
+  margin: 30px auto;
+  opacity: 0;
+  transition: 1s 3s ease-in;
+}
+.open .message-wrap h2 {
+  width: 100%;
+}
+.open p {
+  opacity: 1;
+}
+.open button {
+  opacity: 1;
+}
+@-webkit-keyframes writingScript {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes writingScript {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=_message.css.map */

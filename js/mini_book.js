@@ -1,10 +1,18 @@
 var $bookFront = $('.book-front');
-if (matchMedia('(pointer:fine)').matches) {
+var $bookBack = $('.book-back');
+var hasPointer = matchMedia('(pointer:fine)').matches;
 
-} else {
-  $bookFront.addClass(function() {
-    setTimeout(function () {
-      $bookFront.addClass('pre-open');
-    }, 2000);
-  })
+if (!hasPointer) {
+  $('body').css('cursor', 'pointer');
 }
+
+document.addEventListener('click', function () {
+  if (!$bookFront.hasClass('get-away')) {
+    if ($bookFront.hasClass('pre-open') || hasPointer) {
+      $bookFront.addClass('get-away');
+      $bookBack.addClass('book-full');
+    } else {
+      $bookFront.addClass('pre-open');
+    }
+  }
+});

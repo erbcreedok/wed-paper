@@ -24,8 +24,22 @@
 
 <div class="book-card-container">
 
-    <div class="book book-front"></div>
-    <div class="book book-back"></div>
+    <div class="book book-front">
+        <p>To: <span class="namespace">Somebody</span></p>
+    </div>
+    <div class="book book-back">
+        <link rel="stylesheet" href="css/_moon.css">
+        <link rel="stylesheet" href="css/_space.css">
+        <link rel="stylesheet" href="css/_envelope.css">
+        <link rel="stylesheet" href="css/message-wrap.css">
+        <div class="moon"></div>
+        <div class="space-wrap"><canvas id="space"></canvas></div>
+
+        </div>
+        <div class="message-wrap on-color">
+            <h2>Dear, <span class="namespace">Somebody</span>!</h2>
+        </div>
+    </div>
 
 </div>
 
@@ -36,5 +50,6 @@
 <script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/space.js"></script>
 <script src="js/mini_book.js"></script>
+<script src="js/token-base.js"></script>
 </body>
 </html>

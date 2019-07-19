@@ -6,6 +6,8 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   /* ----- hover ----- */
 }
 .book-card-container .book {
@@ -27,11 +29,20 @@
           transform-origin: left center 0;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/3433202-d2a1bea8a58cd447.png');
-  background-size: cover;
+  background: url('../images/envelope.jpg');
+  background-size: contain;
   overflow: hidden;
   z-index: 2;
-  box-shadow: 2px 2px 0 0 #1e2444;
+  box-shadow: 2px 2px 0 0 #969696;
+}
+.book-card-container .book-front p {
+  display: block;
+  position: absolute;
+  top: 130px;
+  text-align: center;
+  width: 100%;
+  color: #161667;
+  font-size: 20px;
 }
 .book-card-container .book-back {
   transition: opacity 0.4s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -42,6 +53,8 @@
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   opacity: 0;
+  left: 0;
+  right: 0;
 }
 .book-card-container .book-front::after {
   content: " ";
@@ -54,21 +67,36 @@
   transition: all 0.3s ease;
 }
 .book-card-container .book-back {
+  overflow: hidden;
   border-radius: 5px;
-  background: #261349;
+  background: linear-gradient(30deg, #182C51, #09101e);
+}
+.book-card-container .moon {
+  top: 100px;
+  left: 100px;
+}
+.book-card-container .moon:after,
+.book-card-container .moon:before {
+  opacity: 0;
+}
+.book-card-container .moon:after {
+  transition: 1s ease-in;
+}
+.book-card-container .moon:before {
+  transition: 3s 1s ease-in;
 }
 .book-card-container .book-front:hover,
 .book-card-container .book-front.pre-open {
   cursor: pointer;
-  -webkit-transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
-          transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+  -webkit-transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02) translateZ(10px);
+          transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02) translateZ(10px);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  box-shadow: 2px 2px 0 0 #1e2444, 20px 10px 15px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 0 0 #969696, 20px 10px 15px -5px rgba(0, 0, 0, 0.6);
 }
 .book-card-container .book-front:hover:after,
 .book-card-container .book-front.pre-open:after {
-  content: " ";
+  content: "";
   display: block;
   opacity: 1;
   width: 286.66666667px;
@@ -87,6 +115,27 @@
 .book-card-container .book-front.pre-open:before {
   -webkit-transform: translateY(9px);
           transform: translateY(9px);
+  opacity: 1;
+}
+.book-card-container .book-front.get-away {
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: rotateY(-540deg) rotateZ(-2deg) scale(1.02) translate3d(-1000px, -1000px, 100px);
+          transform: rotateY(-540deg) rotateZ(-2deg) scale(1.02) translate3d(-1000px, -1000px, 100px);
+}
+.book-card-container .book-front.get-away + .book {
+  -webkit-transform: rotateY(0deg) rotateZ(0deg) scale(1) translate(0, 0);
+          transform: rotateY(0deg) rotateZ(0deg) scale(1) translate(0, 0);
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  transition: 0.75s 0.1s;
+  border-radius: 0;
+}
+.book-card-container .book-front.get-away + .book .moon:after,
+.book-card-container .book-front.get-away + .book .moon:before {
   opacity: 1;
 }
 /*# sourceMappingURL=book-card.css.map */

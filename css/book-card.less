@@ -8,6 +8,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
+  perspective: 1000px;
   .book {
     position: absolute;
     margin: auto;
@@ -23,21 +24,31 @@
   }
 
   .book-front {
-
     transition: all .3s ease-in-out;
     transform-origin: left center 0;
     transform-style: preserve-3d;
-    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/3433202-d2a1bea8a58cd447.png');
-    background-size: cover;
+    background: url('../images/envelope.jpg');
+    background-size: contain;
     overflow: hidden;
     z-index: 2;
-    box-shadow: 2px 2px 0 0 #1e2444;
+    box-shadow: 2px 2px 0 0 #969696;
+    p {
+      display: block;
+      position: absolute;
+      top: 130px;
+      text-align: center;
+      width: 100%;
+      color: #161667;
+      font-size: 20px;
+    }
   }
   .book-back {
     transition: transform .3s ease-in-out, opacity .4s ease-in-out;
     transform-origin: left center 0;
     transform-style: preserve-3d;
     opacity: 0;
+    left: 0;
+    right: 0;
   }
 
   .book-front::after {
@@ -52,22 +63,35 @@
   }
 
   .book-back {
+    overflow: hidden;
     border-radius: 5px;
-    background: #261349;
+    background: linear-gradient(30deg, #182C51, darken(#182C51, 13%));;
   }
 
+  .moon {
+    top: 100px;
+    left: 100px;
+  }
+  .moon:after, .moon:before {
+    opacity: 0;
+  }
+  .moon:after {
+    transition: 1s ease-in;
+  }
+  .moon:before {
+    transition: 3s 1s ease-in;
+  }
   /* ----- hover ----- */
 
   .book-front:hover, .book-front.pre-open {
-
     cursor: pointer;
-    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+    transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02) translateZ(10px);
     backface-visibility: hidden;
-    box-shadow: 2px 2px 0 0 #1e2444, 20px 10px 15px -5px rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 0 0 #969696, 20px 10px 15px -5px rgba(0, 0, 0, 0.6);
 
     &:after {
       @left: 8 / 180 * @width;
-      content: " ";
+      content: "";
       display: block;
       opacity: 1;
       width: @width - @left;
@@ -85,6 +109,22 @@
     &:before {
       transform: translateY(9px);
       opacity: 1;
+    }
+  }
+  .book-front.get-away {
+    transition: transform .5s;
+    transform: rotateY(-540deg) rotateZ(-2deg) scale(1.02) translate3d(-1000px, -1000px, 100px);
+    & + .book {
+      transform: rotateY(0deg) rotateZ(0deg) scale(1) translate(0, 0);
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      bottom: 0;
+      transition: .75s .1s;
+      border-radius: 0;
+      .moon:after, .moon:before {
+        opacity: 1;
+      }
     }
   }
 }
