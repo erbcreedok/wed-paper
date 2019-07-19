@@ -16,15 +16,12 @@ $titanSize: 84px;
 
 %eye {
   @extend %absPosition;
-
   width: 6px;
   height: 6px;
   background: #53487a;
   border-radius: 10px;
   bottom: 34px;
-
   animation: blink 1s 0s infinite linear;
-
   &.eye--left {
     left: -80px;
   }
@@ -36,7 +33,6 @@ $titanSize: 84px;
 
 .scene {
   @extend %absPosition;
-
   perspective:2600px;
   width: 300px;
   height: 300px;
@@ -67,7 +63,7 @@ $titanSize: 84px;
     border-radius: $titanSize / 2;
     background: #a5c6ff;
     transform-style: preserve-3d;
-    box-shadow: 0px 0px 0px 4px rgba(169, 187, 236, 0.38823529411764707) inset, -30px -20px 50px #637bff inset;
+    box-shadow: 0 0 0 4px rgba(169, 187, 236, 0.38823529411764707) inset, -30px -20px 50px #637bff inset;
     animation: titan 6s infinite ease;
     top: -220px;
 
@@ -100,7 +96,7 @@ $titanSize: 84px;
     border-radius: $saturnSize / 2;
     background: white;
     transform-style: preserve-3d;
-    box-shadow: 0px 0px 0px 4px rgba(255, 255, 255, 0.32941176470588235) inset, -30px -20px 50px #a5adff inset;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.32941176470588235) inset, -30px -20px 50px #a5adff inset;
     animation: saturn 0.6s infinite linear;
 
     &__shadow {
@@ -152,7 +148,7 @@ $titanSize: 84px;
           background: #ea0e61;
           border-bottom-right-radius: 10px;
           border-bottom-left-radius: 10px;
-          box-shadow: 0 6px 0px #53487a inset;
+          box-shadow: 0 6px 0 #53487a inset;
         }
       }
     }
@@ -180,8 +176,8 @@ $titanSize: 84px;
               transform: scale(1);
             }
             to {
-              left: random(400) - 200 + 0px;
-              top: random(400) - 200 + 0px;
+              left: random(400) - 200 + 0;
+              top: random(400) - 200 + 0;
               transform: scale(0);
             }
           }
@@ -197,7 +193,7 @@ $titanSize: 84px;
       @extend %absPosition;
 
       transform: rotateX(84deg) rotateY(8deg);
-      transform-origin: 50% $saturnRingSize / 2 - 0px;
+      transform-origin: 50% $saturnRingSize / 2 - 0;
       animation: ring 0.6s infinite linear;
       top: -80px;
 
@@ -283,7 +279,7 @@ $titanSize: 84px;
   }
 
   50% {
-    left: 0px;
+    left: 0;
   }
 
   75% {
@@ -302,7 +298,7 @@ $titanSize: 84px;
   }
 
   50% {
-    left: 0px;
+    left: 0;
     transform: rotateX(80deg) rotateY(-8deg);
   }
 
@@ -311,7 +307,7 @@ $titanSize: 84px;
   }
 
   100% {
-    left: 0px;
+    left: 0;
     transform: rotateX(84deg) rotateY(8deg);
   }
 }
@@ -393,7 +389,7 @@ $titanSize: 84px;
   }
 
   50% {
-    height: 0px;
+    height: 0;
   }
 
   60% {

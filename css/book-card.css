@@ -1,0 +1,92 @@
+.book-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* ----- hover ----- */
+}
+.book-card-container .book {
+  position: absolute;
+  margin: auto;
+  bottom: -91px;
+  width: 300px;
+  height: 455px;
+  border-radius: 0 5px 5px 0;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.book-card-container .book-wrap {
+  position: relative;
+}
+.book-card-container .book-front {
+  transition: all 0.3s ease-in-out;
+  -webkit-transform-origin: left center 0;
+          transform-origin: left center 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/945546/3433202-d2a1bea8a58cd447.png');
+  background-size: cover;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 2px 2px 0 0 #1e2444;
+}
+.book-card-container .book-back {
+  transition: opacity 0.4s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.4s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform-origin: left center 0;
+          transform-origin: left center 0;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  opacity: 0;
+}
+.book-card-container .book-front::after {
+  content: " ";
+  display: block;
+  opacity: 0;
+  width: 300px;
+  height: 455px;
+  position: relative;
+  left: 8px;
+  transition: all 0.3s ease;
+}
+.book-card-container .book-back {
+  border-radius: 5px;
+  background: #261349;
+}
+.book-card-container .book-front:hover,
+.book-card-container .book-front.pre-open {
+  cursor: pointer;
+  -webkit-transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+          transform: rotateY(-28deg) rotateZ(-2deg) scale(1.02);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  box-shadow: 2px 2px 0 0 #1e2444, 20px 10px 15px -5px rgba(0, 0, 0, 0.6);
+}
+.book-card-container .book-front:hover:after,
+.book-card-container .book-front.pre-open:after {
+  content: " ";
+  display: block;
+  opacity: 1;
+  width: 286.66666667px;
+  height: 455px;
+  position: relative;
+  left: 13.33333333px;
+  background: linear-gradient(-180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
+}
+.book-card-container .book-front:hover + .book,
+.book-card-container .book-front.pre-open + .book {
+  opacity: 1;
+  -webkit-transform: rotateY(-29deg) rotateZ(-2deg) scale(1.02) translate(20px, 8px);
+          transform: rotateY(-29deg) rotateZ(-2deg) scale(1.02) translate(20px, 8px);
+}
+.book-card-container .book-front:hover:before,
+.book-card-container .book-front.pre-open:before {
+  -webkit-transform: translateY(9px);
+          transform: translateY(9px);
+  opacity: 1;
+}
+/*# sourceMappingURL=book-card.css.map */
