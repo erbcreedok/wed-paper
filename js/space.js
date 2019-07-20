@@ -228,9 +228,9 @@ function moveMoon(x, y) {
 }
 
 let $letter = $('.message-wrap');
-
+let zeroOrient = null;
 function moveLetter(x, y) {
-  if (Math.abs(x) > 30 || Math.abs(y) > 30) return;
+  y -= zeroOrient;
   var val = `rotateY(${x*.3}deg) rotateX(${y*-.7}deg)`;
   $letter.css({'transform': val, '-webkit-transform': val});
 }
@@ -244,16 +244,19 @@ function mouseTilt(x, y) {
 
 function startTilts() {
   if (matchMedia('(pointer:fine)').matches) {
-    $(document).mousemove(function(event) {
-      onMouseMove(event);
-      mouseTilt(event.clientX, event.clientY);
-    });
-  } else {
+  //   $(document).mousemove(function(event) {
+  //     onMouseMove(event);
+  //     mouseTilt(event.clientX, event.clientY);
+  //   });
+  // } else {
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function () {
+        if (zeroOrient === null) {
+          zeroOrient =  event.beta;
+        }
         movePointer(-(event.gamma*4), -(event.beta*4));
         moveMoon(event.gamma, event.beta);
-        moveLetter(event.gamma, event.beta+15);
+        moveLetter(event.gamma, event.beta);
       }, true);
     } else if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', function () {
