@@ -1,36 +1,36 @@
 @-webkit-keyframes cresent {
   0% {
-    -webkit-transform: translate(-30px, 30px) scale(0.9);
-            transform: translate(-30px, 30px) scale(0.9);
+    -webkit-transform: translate3d(-30px, 30px, -10000px) scale(0.9);
+            transform: translate3d(-30px, 30px, -10000px) scale(0.9);
     box-shadow: none;
   }
   50% {
-    -webkit-transform: translate(0px, 0px) scale(1.02);
-            transform: translate(0px, 0px) scale(1.02);
+    -webkit-transform: translate3d(0px, 0px, -10000px) scale(1.02);
+            transform: translate3d(0px, 0px, -10000px) scale(1.02);
     box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #C7938B;
     background-color: #efdbd8;
   }
   100% {
-    -webkit-transform: translate(30px, -30px) scale(0.9);
-            transform: translate(30px, -30px) scale(0.9);
+    -webkit-transform: translate3d(30px, -30px, -10000px) scale(0.9);
+            transform: translate3d(30px, -30px, -10000px) scale(0.9);
     box-shadow: none;
   }
 }
 @keyframes cresent {
   0% {
-    -webkit-transform: translate(-30px, 30px) scale(0.9);
-            transform: translate(-30px, 30px) scale(0.9);
+    -webkit-transform: translate3d(-30px, 30px, -10000px) scale(0.9);
+            transform: translate3d(-30px, 30px, -10000px) scale(0.9);
     box-shadow: none;
   }
   50% {
-    -webkit-transform: translate(0px, 0px) scale(1.02);
-            transform: translate(0px, 0px) scale(1.02);
+    -webkit-transform: translate3d(0px, 0px, -10000px) scale(1.02);
+            transform: translate3d(0px, 0px, -10000px) scale(1.02);
     box-shadow: 0 0 10px #f9f3f2, 0 0 80px 8px #C7938B;
     background-color: #efdbd8;
   }
   100% {
-    -webkit-transform: translate(30px, -30px) scale(0.9);
-            transform: translate(30px, -30px) scale(0.9);
+    -webkit-transform: translate3d(30px, -30px, -10000px) scale(0.9);
+            transform: translate3d(30px, -30px, -10000px) scale(0.9);
     box-shadow: none;
   }
 }
@@ -39,6 +39,8 @@
   height: 300px;
   position: absolute;
   transition: 2s ease-out;
+  -webkit-transform: translateZ(-10000px);
+          transform: translateZ(-10000px);
 }
 .moon::after {
   content: "";
@@ -48,6 +50,8 @@
   display: block;
   height: 100%;
   width: 100%;
+  -webkit-transform: translateZ(-10000px);
+          transform: translateZ(-10000px);
 }
 .moon::before {
   content: "";

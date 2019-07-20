@@ -7,16 +7,16 @@ $mobile: 768px;
 // keyframes
 @keyframes cresent{
   0%{
-    transform: translate(-30px, 30px) scale(0.9);
+    transform: translate3d(-30px, 30px, -10000px) scale(0.9);
     box-shadow: none;
   }
   50%{
-    transform: translate(0px, 0px) scale(1.02);
+    transform: translate3d(0px, 0px, -10000px) scale(1.02);
     box-shadow: 0 0 10px lighten($moon, 30%), 0 0 80px 8px $moon;
     background-color: $peak;
   }
   100%{
-    transform: translate(30px, -30px) scale(0.9);
+    transform: translate3d(30px, -30px, -10000px) scale(0.9);
     box-shadow: none;
   }
 }
@@ -25,6 +25,7 @@ $mobile: 768px;
   height: 300px;
   position: absolute;
   transition: 2s ease-out;
+  transform: translateZ(-10000px);
   &::after {
     content: '';
     border-radius: 50%;
@@ -33,6 +34,7 @@ $mobile: 768px;
     display: block;
     height: 100%;
     width: 100%;
+    transform: translateZ(-10000px);
   }
   &::before{
     content: '';

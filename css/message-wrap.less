@@ -2,6 +2,14 @@
 body {
   font-family: 'Caveat', cursive;
 }
+.message-perspective {
+  perspective: 1000px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
 .message-wrap {
   max-width: 500px;
   margin: auto;
@@ -11,6 +19,7 @@ body {
   right: 0;
   padding: 20px;
   opacity: 0;
+  z-index: 1000;
   .message-paper {
     background: #fff6e0 url("../images/paper.jpg");
     background-size: cover;

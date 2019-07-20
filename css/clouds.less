@@ -3,6 +3,9 @@
 #clouds {
   position: absolute;
   top: 200px;
+  @media (max-width: 576px) {
+    top: 100px;
+  }
 }
 .cloud {
   width: 250px;
@@ -13,6 +16,7 @@
   -webkit-border-radius: 200px;
   position: relative;
   box-shadow: 9px -7px 0 0 @cloudBleak inset;
+  transform: translateZ(-9000px);
 }
 
 .cloud:before, .cloud:after {

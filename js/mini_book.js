@@ -5,14 +5,22 @@ var hasPointer = matchMedia('(pointer:fine)').matches;
 if (!hasPointer) {
   $('body').css('cursor', 'pointer');
 }
+console.log({hasPointer});
 
-document.addEventListener('click', function () {
+function openMiniBook () {
   if (!$bookFront.hasClass('get-away')) {
-    if ($bookFront.hasClass('pre-open') || hasPointer) {
+    if (!hasPointer) {
+      $bookFront.addClass('pre-open');
+      setTimeout(function () {
+        $bookFront.addClass('get-away');
+        $bookBack.addClass('book-full');
+      }, 400);
+    } else {
       $bookFront.addClass('get-away');
       $bookBack.addClass('book-full');
-    } else {
-      $bookFront.addClass('pre-open');
     }
   }
-});
+}
+
+document.addEventListener('click', openMiniBook);
+document.addEventListener('touchmove', openMiniBook)

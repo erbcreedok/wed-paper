@@ -2,6 +2,11 @@
   position: absolute;
   top: 200px;
 }
+@media (max-width: 576px) {
+  #clouds {
+    top: 100px;
+  }
+}
 .cloud {
   width: 250px;
   height: 60px;
@@ -11,6 +16,8 @@
   -webkit-border-radius: 200px;
   position: relative;
   box-shadow: 9px -7px 0 0 #041431 inset;
+  -webkit-transform: translateZ(-9000px);
+          transform: translateZ(-9000px);
 }
 .cloud:before,
 .cloud:after {

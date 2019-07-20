@@ -18,8 +18,8 @@ function openBook() {
         }
       });
     }, 3000);
-
   }, 1100);
 }
+
 
 $bookWrap.click(openBook);

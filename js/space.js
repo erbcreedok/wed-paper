@@ -223,14 +223,22 @@ function simulate(repeat=10, x = 10, y=10) {
 var $moon = $('.moon');
 
 function moveMoon(x, y) {
-  var val = `translate(${x}px, ${y}px)`;
+  var val = `translate3d(${x}px, ${y}px, -10000px)`;
   $moon.css({'transform': val, '-webkit-transform': val});
+}
+
+let $letter = $('.message-wrap');
+
+function moveLetter(x, y) {
+  var val = `rotateY(${x*.3}deg) rotateX(${y*-.7}deg)`;
+  $letter.css({'transform': val, '-webkit-transform': val});
 }
 
 function mouseTilt(x, y) {
   x = ((x-$width/2)/$width) * 60;
   y = ((y-$height/2)/$height) * 60;
   moveMoon(-x,-y);
+  moveLetter(x, y);
 }
 
 if (matchMedia('(pointer:fine)').matches) {
@@ -243,6 +251,7 @@ if (matchMedia('(pointer:fine)').matches) {
     window.addEventListener("deviceorientation", function () {
       movePointer(-(event.gamma*4), -(event.beta*4));
       moveMoon(event.gamma, event.beta);
+      moveLetter(event.gamma, event.beta);
     }, true);
   } else if (window.DeviceMotionEvent) {
     window.addEventListener('devicemotion', function () {

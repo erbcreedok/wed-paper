@@ -75,6 +75,12 @@
   top: 100px;
   left: 100px;
 }
+@media (max-width: 576px) {
+  .book-card-container .moon {
+    top: 30px;
+    left: 30px;
+  }
+}
 .book-card-container .moon:after,
 .book-card-container .moon:before {
   opacity: 0;
