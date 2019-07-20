@@ -244,11 +244,11 @@ function mouseTilt(x, y) {
 
 function startTilts() {
   if (matchMedia('(pointer:fine)').matches) {
-  //   $(document).mousemove(function(event) {
-  //     onMouseMove(event);
-  //     mouseTilt(event.clientX, event.clientY);
-  //   });
-  // } else {
+    $(document).mousemove(function(event) {
+      onMouseMove(event);
+      mouseTilt(event.clientX, event.clientY);
+    });
+  } else {
     if (window.DeviceOrientationEvent) {
       window.addEventListener("deviceorientation", function () {
         if (zeroOrient === null) {

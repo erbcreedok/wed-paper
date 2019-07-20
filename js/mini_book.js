@@ -11,16 +11,18 @@ function openMiniBook () {
     if (!hasPointer) {
       $bookFront.addClass('pre-open');
       setTimeout(function () {
-        $bookFront.addClass('get-away');
-        $bookBack.addClass('book-full');
-        startTilts();
+        getAway();
       }, 400);
     } else {
-      $bookFront.addClass('get-away');
-      $bookBack.addClass('book-full');
-      startTilts();
+      getAway();
     }
   }
+}
+
+function getAway() {
+  $bookFront.addClass('get-away');
+  $bookBack.addClass('book-full');
+  startTilts();
 }
 
 document.addEventListener('click', openMiniBook);
