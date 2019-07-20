@@ -200,7 +200,7 @@ function onMouseMove( event ) {
   
   touchInput = false;
   
-  movePointer( event.clientX, event.clientY );
+  movePointer( event.clientX/3, event.clientY/3 );
   
 }
 
@@ -230,6 +230,7 @@ function moveMoon(x, y) {
 let $letter = $('.message-wrap');
 
 function moveLetter(x, y) {
+  if (Math.abs(x) > 30 || Math.abs(y) > 30) return;
   var val = `rotateY(${x*.3}deg) rotateX(${y*-.7}deg)`;
   $letter.css({'transform': val, '-webkit-transform': val});
 }
@@ -241,21 +242,24 @@ function mouseTilt(x, y) {
   moveLetter(x, y);
 }
 
-if (matchMedia('(pointer:fine)').matches) {
-  $(document).mousemove(function(event) {
-    onMouseMove(event);
-    mouseTilt(event.clientX, event.clientY);
-  });
-} else {
-  if (window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", function () {
-      movePointer(-(event.gamma*4), -(event.beta*4));
-      moveMoon(event.gamma, event.beta);
-      moveLetter(event.gamma, event.beta);
-    }, true);
-  } else if (window.DeviceMotionEvent) {
-    window.addEventListener('devicemotion', function () {
-      movePointer(-event.acceleration.y * 2, -event.acceleration.x * 2);
-    }, true);
+function startTilts() {
+  if (matchMedia('(pointer:fine)').matches) {
+    $(document).mousemove(function(event) {
+      onMouseMove(event);
+      mouseTilt(event.clientX, event.clientY);
+    });
+  } else {
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener("deviceorientation", function () {
+        movePointer(-(event.gamma*4), -(event.beta*4));
+        moveMoon(event.gamma, event.beta);
+        moveLetter(event.gamma, event.beta+15);
+      }, true);
+    } else if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', function () {
+        movePointer(-event.acceleration.y * 2, -event.acceleration.x * 2);
+      }, true);
+    }
   }
+
 }
