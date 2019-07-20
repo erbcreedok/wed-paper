@@ -4,6 +4,7 @@ if (token) {
   $.get(`https://wed-e8b40.firebaseio.com/guests/${token}.json`, function(res) {
     if (res.name) {
       $('.namespace').html(res.name);
+      $('#main').fadeIn();
     }
   });
 }

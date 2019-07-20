@@ -72,7 +72,7 @@
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .env {
     width: 320px;
   }

@@ -1,0 +1,122 @@
+@blue: #a667a7;
+@violet: #581674;
+
+.butterfly {
+  position: absolute;
+  width: 30px;
+  height: 120px;
+  background-color: rgba(124, 115, 125, 0.7);
+  border-radius: 50% 50% 50% 50% ~"/" 30% 30% 70% 70%;
+  transform: rotateX(27deg) rotateZ(-72deg) scale(0.5);
+  transition: 1s;
+  bottom: -150px;
+  left: 280px;
+  .folded & {
+    bottom: 50px;
+    left: 90px;
+    transform: rotateX(7deg) rotateZ(-21deg) scale(0.4);
+  }
+  transform-style: preserve-3d;
+
+  &__wing {
+    position: absolute;
+    background-color: @blue;
+
+    &:first-child,
+    &:nth-child(2) {
+      bottom: 39%;
+      width: 150px;
+      height: 175px;
+    }
+    &:first-child {
+      right: 75%;
+      border-radius: 10% 90% 0 30% ~"/" 20% 100% 0 60%;
+      box-shadow: inset 20px 30px 0 fade(@violet, 50%),
+      inset 35px 60px 0 fade(@violet, 40%),
+      inset 50px 90px 0 fade(@violet, 30%),
+      inset 65px 120px 0 fade(@violet, 20%),
+      inset 80px 150px 0 fade(@violet, 10%);
+      transform: rotateY(30deg);
+      transform-origin: right;
+      animation: flap-top-left-wing 4s ease-in-out infinite;
+    }
+    &:nth-child(2) {
+      left: 75%;
+      border-radius: 90% 10% 30% 0 ~"/" 100% 20% 60% 0;
+      box-shadow: inset -20px 30px 0 fade(@violet, 50%),
+        inset -35px 60px 0 fade(@violet, 40%),
+        inset -50px 90px 0 fade(@violet, 30%),
+        inset -65px 120px 0 fade(@violet, 20%),
+        inset -80px 150px 0 fade(@violet, 10%);
+      transform: rotateY(-30deg);
+      transform-origin: left;
+      animation: flap-top-right-wing 4s ease-in-out infinite;
+    }
+    &:nth-child(3),
+    &:last-child {
+      top: 60%;
+      width: 130px;
+      height: 130px;
+    }
+    &:nth-child(3) {
+      right: 75%;
+      border-radius: 90% 0 100% 25% ~"/" 60% 0 140% 80%;
+      box-shadow: inset 15px -20px 0 fade(@violet, 50%),
+      inset 30px -40px 0 fade(@violet, 40%),
+      inset 45px -60px 0 fade(@violet, 30%),
+      inset 60px -80px 0 fade(@violet, 20%),
+      inset 75px -100px 0 fade(@violet, 10%);
+      transform: rotateY(25deg);
+      transform-origin: right;
+      animation: flap-bottom-left-wing 4s ease-in-out infinite;
+    }
+    &:last-child {
+      left: 75%;
+      border-radius: 0 90% 25% 100% ~"/" 0 60% 80% 140%;
+      box-shadow: inset -15px -20px 0 fade(@violet, 50%),
+        inset -30px -40px 0 fade(@violet, 40%),
+        inset -45px -60px 0 fade(@violet, 30%),
+        inset -60px -80px 0 fade(@violet, 20%),
+        inset -75px -100px 0 fade(@violet, 10%);
+      transform: rotateY(-25deg);
+      transform-origin: left;
+      animation: flap-bottom-right-wing 4s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes flap-top-left-wing {
+  10% { transform: rotateY(70deg); }
+  25% { transform: rotateY(50deg); }
+  35% { transform: rotateY(75deg); }
+  45% { transform: rotateY(60deg); }
+  55% { transform: rotateY(75deg); }
+  80% { transform: rotateY(30deg); }
+}
+
+@keyframes flap-top-right-wing {
+  10% { transform: rotateY(-70deg); }
+  25% { transform: rotateY(-50deg); }
+  35% { transform: rotateY(-75deg); }
+  45% { transform: rotateY(-60deg); }
+  55% { transform: rotateY(-75deg); }
+  80% { transform: rotateY(-30deg); }
+}
+
+@keyframes flap-bottom-left-wing {
+  10% { transform: rotateY(65deg); }
+  25% { transform: rotateY(45deg); }
+  35% { transform: rotateY(70deg); }
+  45% { transform: rotateY(55deg); }
+  55% { transform: rotateY(70deg); }
+  80% { transform: rotateY(25deg); }
+}
+
+@keyframes flap-bottom-right-wing {
+  10% { transform: rotateY(-65deg); }
+  25% { transform: rotateY(-45deg); }
+  35% { transform: rotateY(-70deg); }
+  45% { transform: rotateY(-55deg); }
+  55% { transform: rotateY(-70deg); }
+  80% { transform: rotateY(-25deg); }
+}

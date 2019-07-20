@@ -1,0 +1,289 @@
+.butterfly {
+  position: absolute;
+  width: 30px;
+  height: 120px;
+  background-color: rgba(124, 115, 125, 0.7);
+  border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
+  -webkit-transform: rotateX(27deg) rotateZ(-72deg) scale(0.5);
+          transform: rotateX(27deg) rotateZ(-72deg) scale(0.5);
+  transition: 1s;
+  bottom: -150px;
+  left: 280px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.folded .butterfly {
+  bottom: 50px;
+  left: 90px;
+  -webkit-transform: rotateX(7deg) rotateZ(-21deg) scale(0.4);
+          transform: rotateX(7deg) rotateZ(-21deg) scale(0.4);
+}
+.butterfly__wing {
+  position: absolute;
+  background-color: #a667a7;
+}
+.butterfly__wing:first-child,
+.butterfly__wing:nth-child(2) {
+  bottom: 39%;
+  width: 150px;
+  height: 175px;
+}
+.butterfly__wing:first-child {
+  right: 75%;
+  border-radius: 10% 90% 0 30% / 20% 100% 0 60%;
+  box-shadow: inset 20px 30px 0 rgba(88, 22, 116, 0.5), inset 35px 60px 0 rgba(88, 22, 116, 0.4), inset 50px 90px 0 rgba(88, 22, 116, 0.3), inset 65px 120px 0 rgba(88, 22, 116, 0.2), inset 80px 150px 0 rgba(88, 22, 116, 0.1);
+  -webkit-transform: rotateY(30deg);
+          transform: rotateY(30deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: flap-top-left-wing 4s ease-in-out infinite;
+          animation: flap-top-left-wing 4s ease-in-out infinite;
+}
+.butterfly__wing:nth-child(2) {
+  left: 75%;
+  border-radius: 90% 10% 30% 0 / 100% 20% 60% 0;
+  box-shadow: inset -20px 30px 0 rgba(88, 22, 116, 0.5), inset -35px 60px 0 rgba(88, 22, 116, 0.4), inset -50px 90px 0 rgba(88, 22, 116, 0.3), inset -65px 120px 0 rgba(88, 22, 116, 0.2), inset -80px 150px 0 rgba(88, 22, 116, 0.1);
+  -webkit-transform: rotateY(-30deg);
+          transform: rotateY(-30deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: flap-top-right-wing 4s ease-in-out infinite;
+          animation: flap-top-right-wing 4s ease-in-out infinite;
+}
+.butterfly__wing:nth-child(3),
+.butterfly__wing:last-child {
+  top: 60%;
+  width: 130px;
+  height: 130px;
+}
+.butterfly__wing:nth-child(3) {
+  right: 75%;
+  border-radius: 90% 0 100% 25% / 60% 0 140% 80%;
+  box-shadow: inset 15px -20px 0 rgba(88, 22, 116, 0.5), inset 30px -40px 0 rgba(88, 22, 116, 0.4), inset 45px -60px 0 rgba(88, 22, 116, 0.3), inset 60px -80px 0 rgba(88, 22, 116, 0.2), inset 75px -100px 0 rgba(88, 22, 116, 0.1);
+  -webkit-transform: rotateY(25deg);
+          transform: rotateY(25deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-animation: flap-bottom-left-wing 4s ease-in-out infinite;
+          animation: flap-bottom-left-wing 4s ease-in-out infinite;
+}
+.butterfly__wing:last-child {
+  left: 75%;
+  border-radius: 0 90% 25% 100% / 0 60% 80% 140%;
+  box-shadow: inset -15px -20px 0 rgba(88, 22, 116, 0.5), inset -30px -40px 0 rgba(88, 22, 116, 0.4), inset -45px -60px 0 rgba(88, 22, 116, 0.3), inset -60px -80px 0 rgba(88, 22, 116, 0.2), inset -75px -100px 0 rgba(88, 22, 116, 0.1);
+  -webkit-transform: rotateY(-25deg);
+          transform: rotateY(-25deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-animation: flap-bottom-right-wing 4s ease-in-out infinite;
+          animation: flap-bottom-right-wing 4s ease-in-out infinite;
+}
+@-webkit-keyframes flap-top-left-wing {
+  10% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  25% {
+    -webkit-transform: rotateY(50deg);
+            transform: rotateY(50deg);
+  }
+  35% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  45% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+  }
+  55% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  80% {
+    -webkit-transform: rotateY(30deg);
+            transform: rotateY(30deg);
+  }
+}
+@keyframes flap-top-left-wing {
+  10% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  25% {
+    -webkit-transform: rotateY(50deg);
+            transform: rotateY(50deg);
+  }
+  35% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  45% {
+    -webkit-transform: rotateY(60deg);
+            transform: rotateY(60deg);
+  }
+  55% {
+    -webkit-transform: rotateY(75deg);
+            transform: rotateY(75deg);
+  }
+  80% {
+    -webkit-transform: rotateY(30deg);
+            transform: rotateY(30deg);
+  }
+}
+@-webkit-keyframes flap-top-right-wing {
+  10% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  25% {
+    -webkit-transform: rotateY(-50deg);
+            transform: rotateY(-50deg);
+  }
+  35% {
+    -webkit-transform: rotateY(-75deg);
+            transform: rotateY(-75deg);
+  }
+  45% {
+    -webkit-transform: rotateY(-60deg);
+            transform: rotateY(-60deg);
+  }
+  55% {
+    -webkit-transform: rotateY(-75deg);
+            transform: rotateY(-75deg);
+  }
+  80% {
+    -webkit-transform: rotateY(-30deg);
+            transform: rotateY(-30deg);
+  }
+}
+@keyframes flap-top-right-wing {
+  10% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  25% {
+    -webkit-transform: rotateY(-50deg);
+            transform: rotateY(-50deg);
+  }
+  35% {
+    -webkit-transform: rotateY(-75deg);
+            transform: rotateY(-75deg);
+  }
+  45% {
+    -webkit-transform: rotateY(-60deg);
+            transform: rotateY(-60deg);
+  }
+  55% {
+    -webkit-transform: rotateY(-75deg);
+            transform: rotateY(-75deg);
+  }
+  80% {
+    -webkit-transform: rotateY(-30deg);
+            transform: rotateY(-30deg);
+  }
+}
+@-webkit-keyframes flap-bottom-left-wing {
+  10% {
+    -webkit-transform: rotateY(65deg);
+            transform: rotateY(65deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  35% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  45% {
+    -webkit-transform: rotateY(55deg);
+            transform: rotateY(55deg);
+  }
+  55% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  80% {
+    -webkit-transform: rotateY(25deg);
+            transform: rotateY(25deg);
+  }
+}
+@keyframes flap-bottom-left-wing {
+  10% {
+    -webkit-transform: rotateY(65deg);
+            transform: rotateY(65deg);
+  }
+  25% {
+    -webkit-transform: rotateY(45deg);
+            transform: rotateY(45deg);
+  }
+  35% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  45% {
+    -webkit-transform: rotateY(55deg);
+            transform: rotateY(55deg);
+  }
+  55% {
+    -webkit-transform: rotateY(70deg);
+            transform: rotateY(70deg);
+  }
+  80% {
+    -webkit-transform: rotateY(25deg);
+            transform: rotateY(25deg);
+  }
+}
+@-webkit-keyframes flap-bottom-right-wing {
+  10% {
+    -webkit-transform: rotateY(-65deg);
+            transform: rotateY(-65deg);
+  }
+  25% {
+    -webkit-transform: rotateY(-45deg);
+            transform: rotateY(-45deg);
+  }
+  35% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  45% {
+    -webkit-transform: rotateY(-55deg);
+            transform: rotateY(-55deg);
+  }
+  55% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  80% {
+    -webkit-transform: rotateY(-25deg);
+            transform: rotateY(-25deg);
+  }
+}
+@keyframes flap-bottom-right-wing {
+  10% {
+    -webkit-transform: rotateY(-65deg);
+            transform: rotateY(-65deg);
+  }
+  25% {
+    -webkit-transform: rotateY(-45deg);
+            transform: rotateY(-45deg);
+  }
+  35% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  45% {
+    -webkit-transform: rotateY(-55deg);
+            transform: rotateY(-55deg);
+  }
+  55% {
+    -webkit-transform: rotateY(-70deg);
+            transform: rotateY(-70deg);
+  }
+  80% {
+    -webkit-transform: rotateY(-25deg);
+            transform: rotateY(-25deg);
+  }
+}
+/*# sourceMappingURL=butterfly.css.map */
